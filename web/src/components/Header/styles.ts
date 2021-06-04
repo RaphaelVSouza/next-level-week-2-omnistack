@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import MediaQuery from "../../styles/media";
 
-const Wrapper = styled.div`
-  .page-header {
+
+export const Header = styled.header`
     display: flex;
     flex-direction: column;
     background-color: var(--color-primary);
@@ -10,8 +10,9 @@ const Wrapper = styled.div`
     ${MediaQuery.tablet} {
       height: 340px;
     }
+`;
 
-    .top-bar-container {
+export const TopBar = styled.div`
       width: 90%;
       margin: 0 auto;
 
@@ -37,9 +38,11 @@ const Wrapper = styled.div`
       & > img {
         height: 1.6rem;
       }
-    }
+    
+`;
 
-    .header-content {
+export const HeaderContent = styled.div`
+
       width: 90%;
       margin: 0 auto;
       position: relative;
@@ -72,11 +75,7 @@ const Wrapper = styled.div`
         font-size: 1.6rem;
         line-height: 2.6rem;
         color: var(--color-text-in-primary);
-        margin-top: 2.4rem;
+        margin: 2.4rem 0;
 
       }
-    }
-  }
 `;
-
-export default Wrapper;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import MediaQuery from "../../styles/media";
 
-const Wrapper = styled.div`
-   .input-block {
+export const InputBlock = styled.div`
+
       position: relative;
 
       label {
@@ -43,7 +43,6 @@ const Wrapper = styled.div`
         ${MediaQuery.tablet} {
           margin-top: 0;
         }
-      }
+      
 `;
 
-export default Wrapper;

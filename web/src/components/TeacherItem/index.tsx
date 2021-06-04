@@ -2,7 +2,7 @@ import React from 'react';
 
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 import { api } from '../../services/api';
-import Style from './styles';
+import * as S from './styles';
 
 export interface Teacher {
     id: number,
@@ -27,30 +27,30 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
     }
 
     return (
-        <Style>
-            <article className="teacher-item">
-                <header>
-                    <img
-                        src={teacher.avatar}
-                        alt={teacher.name} />
-                    <div>
-                        <strong>{teacher.name}</strong>
-                        <span>{teacher.subject}</span>
-                    </div>
-                </header>
-                <p>{teacher.bio}</p>
-                <footer>
-                    <p>
-                        Preço/hora
+
+        <S.TeacherItem>
+            <header>
+                <img
+                    src={teacher.avatar}
+                    alt={teacher.name} />
+                <div>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
+                </div>
+            </header>
+            <p>{teacher.bio}</p>
+            <footer>
+                <p>
+                    Preço/hora
                         <strong>R$ {teacher.cost}</strong>
-                    </p>
-                    <a onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`} rel="noreferrer" target="_blank" type="button">
-                        <img src={whatsappIcon} alt="Whatsapp" />
+                </p>
+                <a onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`} rel="noreferrer" target="_blank" type="button">
+                    <img src={whatsappIcon} alt="Whatsapp" />
                             Entrar em contato
                         </a>
-                </footer>
-            </article>
-        </Style>
+            </footer>
+        </S.TeacherItem>
+
     );
 };
 

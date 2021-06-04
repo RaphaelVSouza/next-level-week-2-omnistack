@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import MediaQuery from "../../styles/media";
 
-const Wrapper = styled.div`
-  .teacher-item {
-    background-color: var(--color-box-base);
+export const TeacherItem = styled.article`
+
+background-color: var(--color-box-base);
     border: 1px solid var(--color-line-in-white);
     border-radius: 0.8rem;
     margin-top: 2.4rem;
@@ -111,7 +111,5 @@ const Wrapper = styled.div`
         }
       }
     }
-  }
+  
 `;
-
-export default Wrapper;

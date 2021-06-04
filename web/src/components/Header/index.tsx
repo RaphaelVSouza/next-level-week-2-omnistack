@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './styles';
+import * as S from './styles';
 import { Link } from 'react-router-dom';
 import backIcon from '../../assets/images/icons/back.svg';
 import logoImg from '../../assets/images/logo.svg';
@@ -11,27 +11,25 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = (props) => {
     return (
-        <Style>
-            <header className="page-header">
-                <div className="top-bar-container">
-                    <Link to="/">
-                        <img src={backIcon} alt="Voltar" />
-                    </Link>
 
-                    <img src={logoImg} alt="Proffy" />
-                </div>
+        <S.Header>
+            <S.TopBar>
+                <Link to="/">
+                    <img src={backIcon} alt="Voltar" />
+                </Link>
+
+                <img src={logoImg} alt="Proffy" />
+            </S.TopBar>
 
 
-                <div className="header-content">
-                    <strong>{props.title}</strong>
+            <S.HeaderContent>
+                <strong>{props.title}</strong>
 
-                    {props.description && <p>{props.description}</p>}
+                {props.description && <p>{props.description}</p>}
 
-                    {props.children}
-                </div>
-
-            </header>
-        </Style>
+                {props.children}
+            </S.HeaderContent>
+        </S.Header>
     );
 }
 
