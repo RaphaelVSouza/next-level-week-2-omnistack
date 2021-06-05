@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import MediaQuery from "../../styles/media";
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
 
-  #page-teacher-list {
     width: 100vw;
     height: 100vh;
 
@@ -11,7 +10,12 @@ const Wrapper = styled.div`
       max-width: 100%;
     }
 
-    main {
+
+  
+`;
+
+export const Main = styled.main`
+
       margin: 3.2rem auto;
       width: 90%;
 
@@ -20,10 +24,11 @@ const Wrapper = styled.div`
         max-width: 740px;
         margin: 0 auto;
       }
-    }
-  }
+    
+`;
 
-  #search-teachers {
+export const Form = styled.form`
+
     margin-top: 3.2rem;
 
     ${MediaQuery.tablet} {
@@ -68,7 +73,7 @@ const Wrapper = styled.div`
                   }
               }
 
-  }
+  
 `;
 
-export default Wrapper;
+

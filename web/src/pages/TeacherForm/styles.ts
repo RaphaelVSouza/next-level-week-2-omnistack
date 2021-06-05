@@ -1,24 +1,17 @@
 import styled from "styled-components";
 import MediaQuery from "../../styles/media";
 
-const Wrapper = styled.div`
-  #page-teacher-form {
+export const Wrapper = styled.div`
       width: 100vw;
       height: 100vh;
 
       ${MediaQuery.tablet} {
         max-width: 100vw;
       }
+`;
 
-      .header-content {
-        margin-bottom: 6.4rem;
+export const Main = styled.main`
 
-        ${MediaQuery.tablet} {
-            margin-bottom: 0;
-        }
-      }
-
-      main {
           background-color: var(--color-box-base);
           width: 100%;
           max-width: 74rem;
@@ -155,8 +148,7 @@ const Wrapper = styled.div`
               }
 
           }
-        }
-    }
+        
 `;
 
-export default Wrapper;
+

@@ -21,6 +21,7 @@ function Landing() {
     }, [])
 
     return (
+
         <Style>
             <div id="page-landing">
                 <div id="page-landing-content" className="container">
@@ -33,12 +34,12 @@ function Landing() {
                     <div className="buttons-container">
                         <Link to="/study" className="study">
                             <img src={studyIcon} alt="Estudar" />
-                        Estudar
-                    </Link>
+                    Estudar
+                </Link>
                         <Link to="/give-classes" className="give-classes">
                             <img src={giveClassesIcon} alt="Dar aulas" />
-                        Dar aulas
-                    </Link>
+                    Dar aulas
+                </Link>
                     </div>
 
                     <span className="total-connections">
@@ -47,6 +48,7 @@ function Landing() {
                 </div>
             </div>
         </Style>
+
     )
 }
 

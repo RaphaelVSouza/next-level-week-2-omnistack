@@ -9,7 +9,7 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 
 const Textarea: React.FC<TextareaProps> = ({ name, label, ...rest }) => {
     return (
-        <S.TextareaBlock>
+        <S.TextareaBlock className="textarea-block">
             <div>
                 <label htmlFor={name}>{label}</label>
                 <textarea id={name} {...rest} />
