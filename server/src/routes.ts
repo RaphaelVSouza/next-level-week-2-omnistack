@@ -4,8 +4,6 @@ import ConnectionsController from './controllers/ConnectionsController';
 
 const routes = Router();
 
-
-
 routes.post('/classes', ClassesController.store);
 
 routes.get('/classes', ClassesController.index);
